@@ -13,6 +13,10 @@ class InMemoryUsersRepository implements IUsersRepository {
   async save(user: User): Promise<void> {
     this.users.push(user);
   }
+
+  async list(): Promise<User[]> {
+    return this.users;
+  }
 }
 
 export { InMemoryUsersRepository };
