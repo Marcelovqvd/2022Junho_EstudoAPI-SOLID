@@ -2,7 +2,7 @@ import { InMemoryUsersRepository } from "../../Repositories/implementations/InMe
 import { ListUsersController } from "./ListUsersController";
 import { ListUsersUseCase } from "./ListUsersUseCase";
 
-const inMemoryUsersRepository = new InMemoryUsersRepository();
+const inMemoryUsersRepository = InMemoryUsersRepository.getInstance();
 const listUsersUseCase = new ListUsersUseCase(inMemoryUsersRepository);
 const listUsersController = new ListUsersController(listUsersUseCase);
 

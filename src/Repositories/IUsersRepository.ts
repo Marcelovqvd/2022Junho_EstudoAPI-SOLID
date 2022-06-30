@@ -1,9 +1,9 @@
 import { User } from "../Entities/User";
 
 interface IUsersRepository {
-  findByEmail(email: string): Promise<User | undefined>;
-  save(user: User): Promise<void>;
-  list(): Promise<User[]>;
+  findByEmail(email: string): User;
+  create(user: User): void;
+  list(): User[];
 }
 
 export { IUsersRepository };
